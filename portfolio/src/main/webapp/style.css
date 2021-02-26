@@ -1,37 +1,77 @@
 html, body {
-  margin: 0;
+  background: #FAFAFA;
+  color: #444;
+  font-family: sans-serif, Arial;
   height: 100%;
+  margin: 0;
   padding: 0;
   width: 100%;
 }
 
 .button {
+  border-radius: .2em;
   color: white;
   display: block;
   font-size: 17px;
   float: left;
-  height: 100%;
-  padding: 1em;
+  margin: .4em .2em;
+  padding: .6em 1em ;
+  size: max-content;
   text-align: center;
   text-decoration: none;
 }
 
+.content {
+  padding: 1em;
+}
+.content a:link {
+  color: #07c;
+}
+
+.content a:visited {
+  color: purple;
+}
+
 .navbar {
   background: #3B3B3B;
-  height: 3em;
+  height: max-content;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: fixed;
+  top: 0;
   width: 100%;
+}
+
+.navbar a:hover {
+  background-color: grey;
+}
+
+#profilePic {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10em;
+  padding: 1em;
+}
+
+.screenshot {
+  max-height: 20em;
 }
 
 section { 
-  background: #FAFAFA;
   box-sizing: border-box;
   display: block;
-  height: 100vh;
-  padding: 5em;
-  width: 100%;
+  margin: auto;
+  max-width: 70%;
+  padding-top: 3em;
 }
 
+.socialMedia{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  text-align: center;
+}
