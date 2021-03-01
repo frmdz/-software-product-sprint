@@ -19,7 +19,7 @@
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
     <googleCloudProjectId>fmendoza-sps-spring21</googleCloudProjectId>
   </properties>
-cd ~`
+
   <dependencies>
     <!-- Java Servlets API -->
     <dependency>
