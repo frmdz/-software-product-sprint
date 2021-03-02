@@ -11,3 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+async function getAlbumRecommendation() {
+  //Does a request to get some text.
+  const serverResponse = await fetch("/album-recommendation");
+  const responseText = await serverResponse.text();
+
+  //writes the received text into the page.
+  const container = document.getElementById("recommendation-container");
+  container.innerText = responseText;
+}
