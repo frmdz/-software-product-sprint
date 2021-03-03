@@ -15,9 +15,13 @@
 async function getAlbumRecommendation() {
   //Does a request to get some text.
   const serverResponse = await fetch("/album-recommendation");
-  const responseText = await serverResponse.text();
+  const responseObject = await serverResponse.json();
+
+  //chooses a random album from resonseObject
+  const randomNumber = Math.floor(Math.random() * responseObject.length);
+  const randomAlbum = responseObject[randomNumber];
 
   //writes the received text into the page.
   const container = document.getElementById("recommendation-container");
-  container.innerText = responseText;
+  container.innerText = randomAlbum;
 }

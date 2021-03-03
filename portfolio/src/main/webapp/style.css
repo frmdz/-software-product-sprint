@@ -24,12 +24,29 @@ html, body {
 .content {
   padding: 1em;
 }
+
 .content a:link {
   color: #07c;
 }
 
 .content a:visited {
   color: purple;
+}
+
+.input-button {
+  background: #32343E;
+  border: none;
+  border-radius: .3em;
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  padding: .5em .8em;
+  text-align: center;
+  text-decoration: none; 
+}
+
+.input-button:hover {
+  background-color: grey;
 }
 
 .navbar {
@@ -74,4 +91,9 @@ section {
   margin-right: auto;
   max-width: 50%;
   text-align: center;
+}
+
+textarea {
+  height: 15em;
+  width: 35em;
 }
