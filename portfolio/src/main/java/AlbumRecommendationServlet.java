@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
-/** Servlet that a json with a list of music album recomendations. **/
+/** Servlet that returns json with a list of music album recomendations. **/
 @WebServlet("/album-recommendation")
 public class AlbumRecommendationServlet extends HttpServlet {
 

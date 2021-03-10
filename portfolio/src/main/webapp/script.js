@@ -13,7 +13,7 @@
 // limitations under the License.
 
 async function getAlbumRecommendation() {
-  //Does a request to get some text.
+  //Does a request to get some json.
   const serverResponse = await fetch("/album-recommendation");
   const responseObject = await serverResponse.json();
 
@@ -21,7 +21,7 @@ async function getAlbumRecommendation() {
   const randomNumber = Math.floor(Math.random() * responseObject.length);
   const randomAlbum = responseObject[randomNumber];
 
-  //writes the received text into the page.
+  //writes the chosen album into the page.
   const container = document.getElementById("recommendation-container");
   container.innerText = randomAlbum;
 }
@@ -44,7 +44,7 @@ async function getMessages() {
       ul.appendChild(li);
   });
 
-  //insert HTML <ul> into messages-container
+  //inserts HTML <ul> into messages-container
   const container = document.getElementById("messages-container");
   container.appendChild(ul);
 }
