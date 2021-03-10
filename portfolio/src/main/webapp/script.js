@@ -25,3 +25,26 @@ async function getAlbumRecommendation() {
   const container = document.getElementById("recommendation-container");
   container.innerText = randomAlbum;
 }
+
+async function getMessages() {
+  //Does a request to get the messages from datastore.
+  const serverResponse = await fetch("/get-messages");
+  const responseObject = await serverResponse.json();
+
+  //transforms the objects into HTML formated strings
+  const formattedMessages = await responseObject.map(
+    elem => `${elem.name.bold()}: "${elem.message}"`
+  );
+
+  //creates a HTML <ul> and inserts elements to it
+  const ul = document.createElement("ul");
+  formattedMessages.forEach(msg => {
+      const li = document.createElement("li");
+      li.innerHTML = msg;
+      ul.appendChild(li);
+  });
+
+  //insert HTML <ul> into messages-container
+  const container = document.getElementById("messages-container");
+  container.appendChild(ul);
+}
