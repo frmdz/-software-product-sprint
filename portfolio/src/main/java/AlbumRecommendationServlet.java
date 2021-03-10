@@ -20,11 +20,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
-/** Servlet that returns HTML recommends a music album, for now is just a test". **/
+/** Servlet that a json with a list of music album recomendations. **/
 @WebServlet("/album-recommendation")
 public class AlbumRecommendationServlet extends HttpServlet {
 
-  //stores a list of albums that will be returned
+  //stores the list of albums that will be returned
   private ArrayList<String> albumList = new ArrayList<String>();
 
   public AlbumRecommendationServlet() {
@@ -35,10 +35,23 @@ public class AlbumRecommendationServlet extends HttpServlet {
     albumList.add("(1967) Axis: Bold as Love, by The Jimi Hendrix Experience");
     albumList.add("(1971) Meddle, by Pink Floyd");
     albumList.add("(1995) (What's the Story) Morning Glory?, by Oasis");
-    albumList.add("(1961) Led Zeppelin I, by Led Zeppelin");
+    albumList.add("(1969) Led Zeppelin I, by Led Zeppelin");
     albumList.add("(2006) Erotic Cakes, by Guthrie Govan");
     albumList.add("(2010) Brothers, by The Black Keys");
     albumList.add("(1972) Thick as a Brick, by Jethro Tull");
+    albumList.add("(2007) Favourite Worst Nightmare, by Arctic Monkeys");
+    albumList.add("(2013) AM, by Arctic Monkeys");
+    albumList.add("(2006) Whatever People Say I Am, That's What I'm Not, by Arctic Monkeys");
+    albumList.add("(1970) Paranoid, by Black Sabbath");
+    albumList.add("(2008) Reptilectric, by Zoé");
+    albumList.add("(2006) Memo Rex Commander y el Corazón Atómico de la Vía Láctea, by Zoé");
+    albumList.add("(1976) Rising, by Rainbow");
+    albumList.add("(1998) The Masterplan, by Oasis");
+    albumList.add("(2013) Random Access Memories, by Daft Punk");
+    albumList.add("(2000) Standing on the Shoulders of Gigants, by Oasis");
+    albumList.add("(1983) Kill 'em All, by Metallica");
+    albumList.add("(1984) Ride the Lightning, by Metallica");
+    albumList.add("(2001) Lateralus, by Tool");
   }
 
   @Override
@@ -47,7 +60,7 @@ public class AlbumRecommendationServlet extends HttpServlet {
     Gson gson = new Gson();
     String json = gson.toJson(albumList);
 
-    //returns the json
+    //returns json
     response.setContentType("application/json;");
     response.getWriter().println(json);
   }
