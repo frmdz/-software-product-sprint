@@ -48,3 +48,22 @@ async function getMessages() {
   const container = document.getElementById("messages-container");
   container.appendChild(ul);
 }
+
+async function getMemes() {
+  //Does a request to get the memes from cloud store
+  const serverResponse = await fetch("/list-memes");
+  const responseObject = await serverResponse.json();
+
+  //tranforms the list of urls into a list of HTML <img>'s
+  const memeUrls = responseObject.map(
+      url => `<img src="${url}">`
+  );
+  
+  //inserts the <img>'s into the page
+  const container = document.getElementById("meme-container");
+  memeUrls.forEach(img => {
+    const div = document.createElement("div");
+    div.innerHTML = img;
+    container.appendChild(div);
+  });
+}
