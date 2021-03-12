@@ -56,7 +56,7 @@ async function getMemes() {
 
   //tranforms the list of urls into a list of HTML <img>'s
   const memeUrls = responseObject.map(
-      url => `<img src="${url}" max>`
+      url => `<img src="${url}">`
   );
   
   //inserts the <img>'s into the page
