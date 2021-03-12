@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload="getMemes()">
+    <!--Navigation bar-->
+    <div class="navbar">
+      <a class="button" href="/">Home</a>
+    </div>
+
+    <div class="content">
+      <section id="memes">
+        <h1>Upload a meme.</h1>
+        <form action="/upload-meme" method="POST" enctype="multipart/form-data">
+          <input class="input-button" type="file" name="image">
+          <br/><br/>
+          <button class="input-button" >Submit</button>
+        </form>
+      </section>
+
+      <section id="submitted-memes">
+        <h1>Submitted memes</h1>
+        <div id="meme-container">
+            <!-- some memes will be inserted here -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

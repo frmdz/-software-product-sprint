@@ -49,6 +49,11 @@ html, body {
   background-color: grey;
 }
 
+#meme-container img {
+  max-width: 30em;   
+  margin: 2em;
+}
+
 .navbar {
   background: #3B3B3B;
   height: max-content;
