@@ -44,7 +44,7 @@ public class MemeFormHandlerServlet extends HttpServlet {
     InputStream fileInputStream = meme.getInputStream();
 
     PrintWriter out = response.getWriter();
-    try {
+    if(fileInputStream.available() > 0) {
       //uploads the file to cloud storage
       String uploadedFileUrl = uploadToCloudStorage(fileName, fileInputStream);
     
@@ -52,9 +52,9 @@ public class MemeFormHandlerServlet extends HttpServlet {
       out.println("<p>Your meme was uploaded!!!</p>");
       out.println("<img src=\"" + uploadedFileUrl + "\" />");
 
-    } catch(Exception e) {
+    } else {
       //the user tried to submit a empty form.
-      out.println("<p>You need to sumbit a file.</p>");
+      out.println("<p>You need to submit a file.</p>");
     }
   }
 
