@@ -24,34 +24,28 @@ import com.google.gson.Gson;
 @WebServlet("/album-recommendation")
 public class AlbumRecommendationServlet extends HttpServlet {
 
-  //stores the list of albums that will be returned
+  //stores a list spotify IDs
   private ArrayList<String> albumList = new ArrayList<String>();
 
   public AlbumRecommendationServlet() {
-    albumList.add("(1994) Definitely Maybe, by Oasis");
-    albumList.add("(2019) South of Reality, by The Claypool Lennon Delirium");
-    albumList.add("(2015) Currents, by Tame Impala");
-    albumList.add("(1971) Master of Reality, by Black Sabbath");
-    albumList.add("(1967) Axis: Bold as Love, by The Jimi Hendrix Experience");
-    albumList.add("(1971) Meddle, by Pink Floyd");
-    albumList.add("(1995) (What's the Story) Morning Glory?, by Oasis");
-    albumList.add("(1969) Led Zeppelin I, by Led Zeppelin");
-    albumList.add("(2006) Erotic Cakes, by Guthrie Govan");
-    albumList.add("(2010) Brothers, by The Black Keys");
-    albumList.add("(1972) Thick as a Brick, by Jethro Tull");
-    albumList.add("(2007) Favourite Worst Nightmare, by Arctic Monkeys");
-    albumList.add("(2013) AM, by Arctic Monkeys");
-    albumList.add("(2006) Whatever People Say I Am, That's What I'm Not, by Arctic Monkeys");
-    albumList.add("(1970) Paranoid, by Black Sabbath");
-    albumList.add("(2008) Reptilectric, by Zoé");
-    albumList.add("(2006) Memo Rex Commander y el Corazón Atómico de la Vía Láctea, by Zoé");
-    albumList.add("(1976) Rising, by Rainbow");
-    albumList.add("(1998) The Masterplan, by Oasis");
-    albumList.add("(2013) Random Access Memories, by Daft Punk");
-    albumList.add("(2000) Standing on the Shoulders of Gigants, by Oasis");
-    albumList.add("(1983) Kill 'em All, by Metallica");
-    albumList.add("(1984) Ride the Lightning, by Metallica");
-    albumList.add("(2001) Lateralus, by Tool");
+    albumList.add("1VW1MFNstaJuygaoTPkdCk");
+    albumList.add("50xG9YujTzMGaLHfJTskBy");
+    albumList.add("6F2iD5c7Aca3E0wmmPhgax");
+    albumList.add("468ZwCchVtzEbt9BHmXopb");
+    albumList.add("3KiA7e7NDRMKecw7YGVkZK");
+    albumList.add("5l5m1hnH4punS1GQXgEi3T");
+    albumList.add("3kBG6q0aXKxzn01wKTwZr5");
+    albumList.add("132qAo1cDiEJdA3fv4xyNK");
+    albumList.add("79dL7FLiJFOO0EoehUHQBv");
+    albumList.add("1J8QW9qsMLx3staWaHpQmU");
+    albumList.add("1XkGORuUX2QGOEIL4EbJKm");
+    albumList.add("78bpIziExqiI9qztvNFlQu");
+    albumList.add("4m2880jivSbbyEGAKfITCa");
+    albumList.add("48D1hRORqJq52qsnUYZX56");
+    albumList.add("2e5TG0TyL4Q1HvW4w2O8FP");
+    albumList.add("2ym2jcqckXqWeTDoxz3Kst");
+    albumList.add("52AeC4gwbxDfFlLHgK1ByD");
+    albumList.add("6uuQKwM3fRETiscHqlnxuo");
   }
 
   @Override

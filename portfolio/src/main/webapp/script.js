@@ -17,13 +17,13 @@ async function getAlbumRecommendation() {
   const serverResponse = await fetch("/album-recommendation");
   const responseObject = await serverResponse.json();
 
-  //chooses a random album from resonseObject
+  //chooses a random ID from resonseObject
   const randomNumber = Math.floor(Math.random() * responseObject.length);
-  const randomAlbum = responseObject[randomNumber];
+  const randomId = responseObject[randomNumber];
 
   //writes the chosen album into the page.
   const container = document.getElementById("recommendation-container");
-  container.innerText = randomAlbum;
+  container.innerHTML = `<iframe src="https://open.spotify.com/embed/album/${randomId}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
 }
 
 async function getMessages() {
