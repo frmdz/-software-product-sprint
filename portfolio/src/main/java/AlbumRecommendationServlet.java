@@ -24,7 +24,7 @@ import com.google.gson.Gson;
 @WebServlet("/album-recommendation")
 public class AlbumRecommendationServlet extends HttpServlet {
 
-  //stores a list spotify IDs
+  //stores a list of spotify IDs
   private ArrayList<String> albumList = new ArrayList<String>();
 
   public AlbumRecommendationServlet() {
