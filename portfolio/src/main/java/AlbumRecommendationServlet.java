@@ -46,6 +46,9 @@ public class AlbumRecommendationServlet extends HttpServlet {
     albumList.add("2ym2jcqckXqWeTDoxz3Kst");
     albumList.add("52AeC4gwbxDfFlLHgK1ByD");
     albumList.add("6uuQKwM3fRETiscHqlnxuo");
+    albumList.add("0BFzNaeaNv4mahOzwZFGHK");
+    albumList.add("6tVg2Wl9hVKMpHYcAl2V2M");
+    albumList.add("3tZ7O5gGQmkg8FEfqE5wGw");
   }
 
   @Override
